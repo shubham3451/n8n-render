@@ -4,6 +4,7 @@ EXPOSE 5678
 
 
 # Show DB-related env vars before n8n starts (debug only)
-CMD printenv | grep -i db && printenv | grep -i n8n && n8n
+CMD ["/bin/sh", "-c", "printenv | grep -i db && printenv | grep -i n8n && n8n"]
+
 
 
